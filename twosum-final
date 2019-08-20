@@ -1,0 +1,18 @@
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+
+
+let twoSum = function(nums, target) {
+    //keep key/value pairs of the val in array, and the index of the *complementing* number needed to add to target
+   const  comp = {};
+    for (i=0; i<=nums.length; i++) {
+        if (comp[nums[i]] >= 0) {
+            return [comp[nums[i]], i]
+        }
+        comp[target-nums[i]] = i
+    }
+};
+
