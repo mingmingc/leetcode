@@ -1,0 +1,23 @@
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */
+ 
+let addTwoNumbers = function(l1, l2) {
+    const reverse1 = addNum(l1);
+    const reverse2 = addNum(l2); 
+};
+
+let addNum = (arr) => {
+    arr.reverse().forEach(i) {
+        return 
+    }
+}
