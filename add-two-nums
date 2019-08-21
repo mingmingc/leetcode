@@ -10,14 +10,15 @@
  * @param {ListNode} l2
  * @return {ListNode}
  */
- 
+
 let addTwoNumbers = function(l1, l2) {
-    const reverse1 = addNum(l1);
-    const reverse2 = addNum(l2); 
+    console.log("list 1: " + l1.length);
+    console.log("list 2: " + l2.length);
+    
 };
 
-let addNum = (arr) => {
-    arr.reverse().forEach(i) {
-        return 
-    }
-}
+//1st val: list.val, 2nd: .next.val, 3rd: .next.next.val, etc
+//take vals, add them to empty string in reverse (val + str), parseInt() on string
+//do this twice, add the vals
+//construct linked list in reverse
+//can .split("").reverse() and then parseInt() each and turn into linked list
