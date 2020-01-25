@@ -1,0 +1,86 @@
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */
+var addTwoNumbers = function(l1, l2) { 
+    let res = new ListNode(0);
+    let current = res;
+    let sum = 0;
+    let carry = 0;
+
+    while (l1||l2||sum > 0) {
+        
+        if (l1) {
+            sum += l1.val;
+            l1 = l1.next;
+        }
+        
+        if (l2) {
+            sum += l2.val;
+            l2 = l2.next;
+        }
+        
+        //let's say sum currently 10 in our [7, 10, 7] --> should be [7, 0, 8], so we need that 1 to carry  
+        //over to the next node
+        if (sum >= 10) {
+            //this would change sum to 0
+            sum -=10;
+            carry = 1;
+            console.log(sum + ' ' + carry);
+        }
+        
+        
+        current.next = new ListNode(sum);
+        current = current.next;
+        sum = carry;
+        carry = 0;
+    }
+    
+    return res.next;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //naive solution below with a linked list w/ 3 nodes
+//     const sum = parseInt("" + l1.next.next.val + l1.next.val + l1.val) + 
+//                 parseInt("" + l2.next.next.val + l2.next.val + l2.val);
+//     const sumToArr = (""+ 807).split('').reverse();
+//     const resultLinkedList = {
+//         'val': sumToArr[0], 
+//         'next': {
+//             'val': sumToArr[1],
+//             'next': {
+//                 'val': sumToArr[2],
+//                 'next': null
+//             }
+//         }
+//     }
+    
+//     return resultLinkedList;
+// };
+
+//input looks something like: 
+// {'val': 2, 
+    // 'next': {
+    //     'val': 4,
+    //     'next': {
+    //         'val': 3,
+    //          'next': null (or undefined) 
+    //     }
+    // }
+//  }
+
