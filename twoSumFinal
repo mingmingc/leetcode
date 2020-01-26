@@ -4,7 +4,9 @@
  * @return {number[]}
  */
 
- //reduces runtime from O(n^2) to O(n)
+ //reduces time complexity from O(n^2) to O(n)
+ //O(n) space complexity: hash stores n values at most
+ 
 let twoSum = function(nums, target) {
     //keep key/value pairs:
     //key: difference 
