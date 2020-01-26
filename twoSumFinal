@@ -14,10 +14,13 @@ let twoSum = function(nums, target) {
    const  comp = {};
   
     for (i=0; i<=nums.length; i++) {
+        //if value exist in hash, return the index of diff & index of current num adding to target
         if (comp[nums[i]] >= 0) {
             return [comp[nums[i]], i]
         }
         comp[target-nums[i]] = i
+        //difference between target and current num in key,
+        //current index in val
     }
 };
 
