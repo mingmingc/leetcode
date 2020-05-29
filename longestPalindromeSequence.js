@@ -22,6 +22,7 @@ One possible longest palindromic subsequence is "bb".
  * @return {number}
  */
 var longestPalindromeSubseq = function(s) {
+    //Start cache here
     function traverse(start, end) {
         if (start > end) {
             return 0;
